@@ -16,7 +16,32 @@
  @param usedLetters the array of letters that have already been used
  */
 void printWord(NSString *word, NSArray<NSString*> *usedLetters) {
-    //TODO
+    BOOL missingLetter = NO;
+    for (NSInteger i = 0; i < [word length]; i++) {
+        unichar letter = [word characterAtIndex:i];
+        NSString *letterString = [NSString stringWithFormat:@"%C", letter];
+        
+        if ([usedLetters containsObject:letterString]) {
+            printf("%C", letter);
+        } else {
+            printf("_");
+            missingLetter = YES; // we haven't won yet
+        }
+    }
+    
+    printf("\nGuesses: %ld/8\n", [usedLetters count]);
+    
+    if (missingLetter == NO) {
+        printf("It looks like you live on... for now.\n");
+        exit(0);
+    } else {
+        if ([usedLetters count] == 8) {
+            printf("Oops – you died! The word was %s.\n", [word cStringUsingEncoding:NSUTF8StringEncoding]);
+            exit(0);
+        } else {
+        printf("Enter a guess: ");
+        }
+    }
 }
 
 int main(int argc, const char * argv[]) {
@@ -50,6 +75,7 @@ int main(int argc, const char * argv[]) {
             }
             
             printWord(word, usedLetters);
+            
         }
     }
     return 0;
