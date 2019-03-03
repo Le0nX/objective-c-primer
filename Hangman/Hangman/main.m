@@ -55,8 +55,9 @@ int main(int argc, const char * argv[]) {
         
         /// game loop
         while(1) {
-            char userInput[256];
-            scanf("%256s",userInput);
+            char userInput[5];
+            int x = scanf("%5s",userInput);
+            printf("%d", x);
             
             NSString *input = [NSString stringWithCString:userInput encoding:NSUTF8StringEncoding];
             
