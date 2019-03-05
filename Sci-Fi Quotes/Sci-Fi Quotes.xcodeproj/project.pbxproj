@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		143AEC2B222C811B00989278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AEC2A222C811B00989278 /* main.m */; };
+		143AEC33222E1AE500989278 /* DNQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AEC32222E1AE500989278 /* DNQuote.m */; };
+		143AEC36222E205E00989278 /* DNApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AEC35222E205E00989278 /* DNApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		143AEC27222C811B00989278 /* Sci-Fi Quotes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Sci-Fi Quotes"; sourceTree = BUILT_PRODUCTS_DIR; };
 		143AEC2A222C811B00989278 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		143AEC31222E1AE500989278 /* DNQuote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNQuote.h; sourceTree = "<group>"; };
+		143AEC32222E1AE500989278 /* DNQuote.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNQuote.m; sourceTree = "<group>"; };
+		143AEC34222E205E00989278 /* DNApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNApp.h; sourceTree = "<group>"; };
+		143AEC35222E205E00989278 /* DNApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				143AEC2A222C811B00989278 /* main.m */,
+				143AEC34222E205E00989278 /* DNApp.h */,
+				143AEC35222E205E00989278 /* DNApp.m */,
+				143AEC31222E1AE500989278 /* DNQuote.h */,
+				143AEC32222E1AE500989278 /* DNQuote.m */,
 			);
 			path = "Sci-Fi Quotes";
 			sourceTree = "<group>";
@@ -118,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143AEC36222E205E00989278 /* DNApp.m in Sources */,
+				143AEC33222E1AE500989278 /* DNQuote.m in Sources */,
 				143AEC2B222C811B00989278 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
