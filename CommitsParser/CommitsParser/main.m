@@ -11,9 +11,12 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        CPApp* object = [CPApp alloc];
-        [object fetchCommitsForRepo:@"hi"];
+        NSString *repo = @"apple/swift";
+        if (argc == 2) {
+            repo = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
+        }
+        CPApp *app = [CPApp new];
+        [app fetchCommitsForRepo:repo];
     }
     return 0;
 }

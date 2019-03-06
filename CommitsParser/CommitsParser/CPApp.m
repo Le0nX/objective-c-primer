@@ -32,6 +32,10 @@
     
     for (NSDictionary *entry in json) {
         NSString *name = entry[@"commit"][@"author"][@"name"];
+        NSString *message = entry[@"commit"][@"message"];
+        
+        message = [message stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+        printf("%s: %s\n\n", [name cStringUsingEncoding:NSUTF8StringEncoding], [message cStringUsingEncoding:NSUTF8StringEncoding]);
     }
 }
 
